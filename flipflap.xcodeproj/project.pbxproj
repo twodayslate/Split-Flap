@@ -3,17 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F6F29FBE23EDDF19000AF82B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */; };
 		F6F29FC023EDDF19000AF82B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */; };
 		F6F29FC223EDDF19000AF82B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC123EDDF19000AF82B /* ViewController.swift */; };
-		F6F29FC523EDDF19000AF82B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F29FC323EDDF19000AF82B /* Main.storyboard */; };
 		F6F29FC823EDDF19000AF82B /* flipflap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC623EDDF19000AF82B /* flipflap.xcdatamodeld */; };
 		F6F29FCA23EDDF1C000AF82B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6F29FC923EDDF1C000AF82B /* Assets.xcassets */; };
 		F6F29FCD23EDDF1C000AF82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F29FCB23EDDF1C000AF82B /* LaunchScreen.storyboard */; };
+		F6F29FD623EDDF52000AF82B /* Splitflap in Frameworks */ = {isa = PBXBuildFile; productRef = F6F29FD523EDDF52000AF82B /* Splitflap */; };
+		F6F29FD823EDF77A000AF82B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,11 @@
 		F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F6F29FC123EDDF19000AF82B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6F29FC423EDDF19000AF82B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6F29FC723EDDF19000AF82B /* flipflap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flipflap.xcdatamodel; sourceTree = "<group>"; };
 		F6F29FC923EDDF1C000AF82B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6F29FCC23EDDF1C000AF82B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6F29FCE23EDDF1C000AF82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F29FD623EDDF52000AF82B /* Splitflap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +63,7 @@
 				F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */,
 				F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */,
 				F6F29FC123EDDF19000AF82B /* ViewController.swift */,
-				F6F29FC323EDDF19000AF82B /* Main.storyboard */,
+				F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */,
 				F6F29FC923EDDF1C000AF82B /* Assets.xcassets */,
 				F6F29FCB23EDDF1C000AF82B /* LaunchScreen.storyboard */,
 				F6F29FCE23EDDF1C000AF82B /* Info.plist */,
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = flipflap;
+			packageProductDependencies = (
+				F6F29FD523EDDF52000AF82B /* Splitflap */,
+			);
 			productName = flipflap;
 			productReference = F6F29FBA23EDDF19000AF82B /* flipflap.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = F6F29FB123EDDF18000AF82B;
+			packageReferences = (
+				F6F29FD423EDDF52000AF82B /* XCRemoteSwiftPackageReference "Splitflap" */,
+			);
 			productRefGroup = F6F29FBB23EDDF19000AF82B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +138,6 @@
 			files = (
 				F6F29FCD23EDDF1C000AF82B /* LaunchScreen.storyboard in Resources */,
 				F6F29FCA23EDDF1C000AF82B /* Assets.xcassets in Resources */,
-				F6F29FC523EDDF19000AF82B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +151,7 @@
 				F6F29FC223EDDF19000AF82B /* ViewController.swift in Sources */,
 				F6F29FBE23EDDF19000AF82B /* AppDelegate.swift in Sources */,
 				F6F29FC023EDDF19000AF82B /* SceneDelegate.swift in Sources */,
+				F6F29FD823EDF77A000AF82B /* SettingsViewController.swift in Sources */,
 				F6F29FC823EDDF19000AF82B /* flipflap.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +159,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F6F29FC323EDDF19000AF82B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6F29FC423EDDF19000AF82B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6F29FCB23EDDF1C000AF82B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6F29FD423EDDF52000AF82B /* XCRemoteSwiftPackageReference "Splitflap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/Splitflap.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6F29FD523EDDF52000AF82B /* Splitflap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6F29FD423EDDF52000AF82B /* XCRemoteSwiftPackageReference "Splitflap" */;
+			productName = Splitflap;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F6F29FC623EDDF19000AF82B /* flipflap.xcdatamodeld */ = {
