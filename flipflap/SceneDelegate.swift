@@ -34,12 +34,40 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 
                 self.window?.tintColor = color
             }
-                        
+            
+            UserDefaults.standard.addObserver(self, forKeyPath: "theme", options: .new, context: nil)
+            self.setTheme()
+            
             window.makeKeyAndVisible()
         }
         
+        
+        
         // don't fall asleep
         UIApplication.shared.isIdleTimerDisabled = true
+    }
+    
+    deinit {
+        UserDefaults.standard.removeObserver(self, forKeyPath: "theme")
+    }
+    
+    func setTheme() {
+        DispatchQueue.main.async {
+            switch UserDefaults.standard.integer(forKey: "theme") {
+            case 1:
+                self.window?.overrideUserInterfaceStyle = .light
+            case 2:
+                self.window?.overrideUserInterfaceStyle = .dark
+            default:
+                self.window?.overrideUserInterfaceStyle = .unspecified
+            }
+        }
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "theme" {
+            self.setTheme()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

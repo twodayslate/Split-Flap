@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6B15A4D23F478AC001DB252 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A4C23F478AC001DB252 /* UIViewController.swift */; };
+		F6B15A5023F48797001DB252 /* EFColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F6B15A4F23F48797001DB252 /* EFColorPicker */; };
+		F6B15A5223F4CD3D001DB252 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A5123F4CD3D001DB252 /* FontViewController.swift */; };
 		F6F29FBE23EDDF19000AF82B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */; };
 		F6F29FC023EDDF19000AF82B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */; };
 		F6F29FC223EDDF19000AF82B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC123EDDF19000AF82B /* ViewController.swift */; };
@@ -18,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6B15A4C23F478AC001DB252 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F6B15A5123F4CD3D001DB252 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
 		F6F29FBA23EDDF19000AF82B /* flipflap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flipflap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6F29FD623EDDF52000AF82B /* Splitflap in Frameworks */,
+				F6B15A5023F48797001DB252 /* EFColorPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,8 +76,10 @@
 			children = (
 				F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */,
 				F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */,
+				F6B15A4C23F478AC001DB252 /* UIViewController.swift */,
 				F6F29FC123EDDF19000AF82B /* ViewController.swift */,
 				F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */,
+				F6B15A5123F4CD3D001DB252 /* FontViewController.swift */,
 				F6F29FC923EDDF1C000AF82B /* Assets.xcassets */,
 				F6F29FCB23EDDF1C000AF82B /* LaunchScreen.storyboard */,
 				F6F29FCE23EDDF1C000AF82B /* Info.plist */,
@@ -98,6 +106,7 @@
 			name = flipflap;
 			packageProductDependencies = (
 				F6F29FD523EDDF52000AF82B /* Splitflap */,
+				F6B15A4F23F48797001DB252 /* EFColorPicker */,
 			);
 			productName = flipflap;
 			productReference = F6F29FBA23EDDF19000AF82B /* flipflap.app */;
@@ -129,6 +138,7 @@
 			mainGroup = F6F29FB123EDDF18000AF82B;
 			packageReferences = (
 				F6F29FD423EDDF52000AF82B /* XCRemoteSwiftPackageReference "Splitflap" */,
+				F6B15A4E23F48797001DB252 /* XCRemoteSwiftPackageReference "EFColorPicker" */,
 			);
 			productRefGroup = F6F29FBB23EDDF19000AF82B /* Products */;
 			projectDirPath = "";
@@ -157,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6F29FC223EDDF19000AF82B /* ViewController.swift in Sources */,
+				F6B15A5223F4CD3D001DB252 /* FontViewController.swift in Sources */,
 				F6F29FBE23EDDF19000AF82B /* AppDelegate.swift in Sources */,
+				F6B15A4D23F478AC001DB252 /* UIViewController.swift in Sources */,
 				F6F29FC023EDDF19000AF82B /* SceneDelegate.swift in Sources */,
 				F6F29FD823EDF77A000AF82B /* SettingsViewController.swift in Sources */,
 				F6F29FC823EDDF19000AF82B /* flipflap.xcdatamodeld in Sources */,
@@ -297,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = C6L3992RFB;
 				INFOPLIST_FILE = flipflap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -304,6 +317,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.twodayslate.flipflap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -316,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = C6L3992RFB;
 				INFOPLIST_FILE = flipflap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -323,6 +338,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.twodayslate.flipflap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -354,6 +370,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F6B15A4E23F48797001DB252 /* XCRemoteSwiftPackageReference "EFColorPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EFPrefix/EFColorPicker";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		F6F29FD423EDDF52000AF82B /* XCRemoteSwiftPackageReference "Splitflap" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yannickl/Splitflap.git";
@@ -365,6 +389,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F6B15A4F23F48797001DB252 /* EFColorPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6B15A4E23F48797001DB252 /* XCRemoteSwiftPackageReference "EFColorPicker" */;
+			productName = EFColorPicker;
+		};
 		F6F29FD523EDDF52000AF82B /* Splitflap */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F6F29FD423EDDF52000AF82B /* XCRemoteSwiftPackageReference "Splitflap" */;
