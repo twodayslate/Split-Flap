@@ -125,17 +125,10 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "background_color" {
-            if let data = UserDefaults.standard.object(forKey: "background_color") as? Data, let color = try? NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: data) {
-                
-                print("changing background for", self.view)
-                self.view.backgroundColor = color
-            }
+        guard let key = keyPath else {
+            return
         }
-        
-        if keyPath == "flap_color" || keyPath == "text_color" || keyPath == "font" {
-            self.flaps.reload()
-        }
+        self.didChangeKey(key)
     }
     
     @objc func tapScreen(_ sender: UITapGestureRecognizer) {
@@ -267,7 +260,17 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
 
 extension ViewController: SettingsControllerDelegate {
     func didChangeKey(_ key: String) {
-        return
+        if key == "background_color" {
+            if let data = UserDefaults.standard.object(forKey: key) as? Data, let color = try? NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: data) {
+                self.view.backgroundColor = color
+            } else {
+                self.view.backgroundColor = .systemBackground
+            }
+        }
+        
+        if key == "flap_color" || key == "text_color" || key == "font" {
+            self.flaps.reload()
+        }
     }
     
     func didCloseSettings() {

@@ -403,6 +403,11 @@ class SettingsViewController: UITableViewController {
     func resetToDefault() {
         UserDefaults.standard.set(0, forKey: "theme")
         self.clearCustomColors()
+        let font = UIFont(name: "Courier", size: 45.0)
+        if let data = try? NSKeyedArchiver.archivedData(withRootObject: font, requiringSecureCoding: false) {
+            UserDefaults.standard.set(data, forKey: "font")
+        }
+        
         self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
     }
     
