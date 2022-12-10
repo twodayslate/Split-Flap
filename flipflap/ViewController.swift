@@ -175,7 +175,6 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
             DispatchQueue.main.async {
                 
                 self.flapText = self.currentTime()
-
                 self.flaps.setText(self.flapText, animated: true)
             }
         }
@@ -185,7 +184,7 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
         return self.flapText.count
     }
     
-    func tokensInSplitflap(_ splitflap: Splitflap) -> [String] {
+    func tokensInSplitflap(_ splitflap: Splitflap, flap: Int) -> [String] {
         // so this is the order in which things will actually flip
         if shouldSetTime {
             if Calendar.current.is24Hour {
@@ -210,8 +209,8 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
             
             textColor = color
         }
-        
-        var width = splitflap.bounds.width / CGFloat(self.numberOfFlapsInSplitflap(splitflap))
+
+        let width = splitflap.bounds.width / CGFloat(self.numberOfFlapsInSplitflap(splitflap))
 
         var font = UIFont(name: "Courier", size: width)
         
@@ -224,6 +223,7 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
             builder.backgroundColor = background
             builder.textColor       = textColor
             builder.lineColor       = .opaqueSeparator
+            builder.adjustsFontSizeToFitWidth = true
             builder.font = font
         }
     }

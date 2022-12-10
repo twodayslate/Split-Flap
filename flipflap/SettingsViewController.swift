@@ -304,10 +304,11 @@ class SettingsViewController: UITableViewController {
                 break
             default:
                 if UserDefaults.standard.integer(forKey: "theme") == 3 {
+
                     let colorSelectionController = EFColorSelectionViewController()
                     colorSelectionController.isColorTextFieldHidden = false
                     let navCtrl = UINavigationController(rootViewController: colorSelectionController)
-                    //navCtrl.navigationBar.backgroundColor = UIColor.white
+                    navCtrl.navigationBar.backgroundColor = UIColor.systemBackground
                     navCtrl.navigationBar.isTranslucent = false
                     navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
 
