@@ -8,6 +8,7 @@ struct SplitFlapView: View {
     let fontScale: CGFloat
     let flapScale: CGFloat
     let flapCornerScale: CGFloat
+    let soundSelection: FlapSoundSelection
 
     var body: some View {
         GeometryReader { proxy in
@@ -28,7 +29,8 @@ struct SplitFlapView: View {
                         textColor: textColor,
                         fontData: fontData,
                         fontScale: fontScale,
-                        flapCornerScale: flapCornerScale
+                        flapCornerScale: flapCornerScale,
+                        soundSelection: soundSelection
                     )
                     .frame(width: flapWidth, height: flapHeight)
                 }
@@ -46,6 +48,7 @@ private struct FlapCell: View {
     let fontData: Data
     let fontScale: CGFloat
     let flapCornerScale: CGFloat
+    let soundSelection: FlapSoundSelection
 
     @State private var current: Character
     @State private var previous: Character
@@ -53,13 +56,22 @@ private struct FlapCell: View {
     @State private var bottomAngle: Double = 90
     @State private var isFlipping = false
 
-    init(character: Character, background: Color, textColor: Color, fontData: Data, fontScale: CGFloat, flapCornerScale: CGFloat) {
+    init(
+        character: Character,
+        background: Color,
+        textColor: Color,
+        fontData: Data,
+        fontScale: CGFloat,
+        flapCornerScale: CGFloat,
+        soundSelection: FlapSoundSelection
+    ) {
         self.character = character
         self.background = background
         self.textColor = textColor
         self.fontData = fontData
         self.fontScale = fontScale
         self.flapCornerScale = flapCornerScale
+        self.soundSelection = soundSelection
         _current = State(initialValue: character)
         _previous = State(initialValue: character)
     }
@@ -166,6 +178,7 @@ private struct FlapCell: View {
             isFlipping = true
             topAngle = 0
             bottomAngle = 90
+            FlapSoundPlayer.shared.play(soundSelection)
 
             withAnimation(.easeIn(duration: 0.18)) {
                 topAngle = -90
