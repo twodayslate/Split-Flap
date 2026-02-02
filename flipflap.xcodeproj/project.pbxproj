@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F6B15A4D23F478AC001DB252 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A4C23F478AC001DB252 /* UIViewController.swift */; };
-		F6B15A5023F48797001DB252 /* EFColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F6B15A4F23F48797001DB252 /* EFColorPicker */; };
-		F6B15A5223F4CD3D001DB252 /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A5123F4CD3D001DB252 /* FontViewController.swift */; };
-		F6DAA11C2944F13F001F4C56 /* Splitflap in Frameworks */ = {isa = PBXBuildFile; productRef = F6DAA11B2944F13F001F4C56 /* Splitflap */; };
-		F6F29FBE23EDDF19000AF82B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */; };
-		F6F29FC023EDDF19000AF82B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */; };
-		F6F29FC223EDDF19000AF82B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC123EDDF19000AF82B /* ViewController.swift */; };
+		F6B15A4D23F478AC001DB252 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A4C23F478AC001DB252 /* Preferences.swift */; };
+		F6B15A5223F4CD3D001DB252 /* FontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A5123F4CD3D001DB252 /* FontPickerView.swift */; };
+		F6F29FBE23EDDF19000AF82B /* FlipflapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBD23EDDF19000AF82B /* FlipflapApp.swift */; };
+		F6F29FC023EDDF19000AF82B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBF23EDDF19000AF82B /* ContentView.swift */; };
+		F6F29FC223EDDF19000AF82B /* SplitFlapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC123EDDF19000AF82B /* SplitFlapView.swift */; };
 		F6F29FC823EDDF19000AF82B /* flipflap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC623EDDF19000AF82B /* flipflap.xcdatamodeld */; };
 		F6F29FCA23EDDF1C000AF82B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6F29FC923EDDF1C000AF82B /* Assets.xcassets */; };
 		F6F29FCD23EDDF1C000AF82B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F29FCB23EDDF1C000AF82B /* LaunchScreen.storyboard */; };
-		F6F29FD823EDF77A000AF82B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */; };
+		F6F29FD823EDF77A000AF82B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FD723EDF77A000AF82B /* SettingsView.swift */; };
+		F6A1B2C3D4E5F67890123457 /* TimeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1B2C3D4E5F67890123456 /* TimeFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F6B15A4C23F478AC001DB252 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		F6B15A5123F4CD3D001DB252 /* FontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
+		F6B15A4C23F478AC001DB252 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		F6B15A5123F4CD3D001DB252 /* FontPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerView.swift; sourceTree = "<group>"; };
 		F6F29FBA23EDDF19000AF82B /* flipflap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flipflap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6F29FC123EDDF19000AF82B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6F29FBD23EDDF19000AF82B /* FlipflapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipflapApp.swift; sourceTree = "<group>"; };
+		F6F29FBF23EDDF19000AF82B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F6F29FC123EDDF19000AF82B /* SplitFlapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitFlapView.swift; sourceTree = "<group>"; };
 		F6F29FC723EDDF19000AF82B /* flipflap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = flipflap.xcdatamodel; sourceTree = "<group>"; };
 		F6F29FC923EDDF1C000AF82B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6F29FCC23EDDF1C000AF82B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6F29FCE23EDDF1C000AF82B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6F29FD723EDF77A000AF82B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F6A1B2C3D4E5F67890123456 /* TimeFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,8 +39,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6DAA11C2944F13F001F4C56 /* Splitflap in Frameworks */,
-				F6B15A5023F48797001DB252 /* EFColorPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +72,13 @@
 		F6F29FBC23EDDF19000AF82B /* flipflap */ = {
 			isa = PBXGroup;
 			children = (
-				F6F29FBD23EDDF19000AF82B /* AppDelegate.swift */,
-				F6F29FBF23EDDF19000AF82B /* SceneDelegate.swift */,
-				F6B15A4C23F478AC001DB252 /* UIViewController.swift */,
-				F6F29FC123EDDF19000AF82B /* ViewController.swift */,
-				F6F29FD723EDF77A000AF82B /* SettingsViewController.swift */,
-				F6B15A5123F4CD3D001DB252 /* FontViewController.swift */,
+				F6F29FBD23EDDF19000AF82B /* FlipflapApp.swift */,
+				F6F29FBF23EDDF19000AF82B /* ContentView.swift */,
+				F6F29FC123EDDF19000AF82B /* SplitFlapView.swift */,
+				F6F29FD723EDF77A000AF82B /* SettingsView.swift */,
+				F6B15A5123F4CD3D001DB252 /* FontPickerView.swift */,
+				F6B15A4C23F478AC001DB252 /* Preferences.swift */,
+				F6A1B2C3D4E5F67890123456 /* TimeFormat.swift */,
 				F6F29FC923EDDF1C000AF82B /* Assets.xcassets */,
 				F6F29FCB23EDDF1C000AF82B /* LaunchScreen.storyboard */,
 				F6F29FCE23EDDF1C000AF82B /* Info.plist */,
@@ -105,8 +104,6 @@
 			);
 			name = flipflap;
 			packageProductDependencies = (
-				F6B15A4F23F48797001DB252 /* EFColorPicker */,
-				F6DAA11B2944F13F001F4C56 /* Splitflap */,
 			);
 			productName = flipflap;
 			productReference = F6F29FBA23EDDF19000AF82B /* flipflap.app */;
@@ -137,8 +134,6 @@
 			);
 			mainGroup = F6F29FB123EDDF18000AF82B;
 			packageReferences = (
-				F6B15A4E23F48797001DB252 /* XCRemoteSwiftPackageReference "EFColorPicker" */,
-				F6DAA11A2944F13F001F4C56 /* XCRemoteSwiftPackageReference "Splitflap" */,
 			);
 			productRefGroup = F6F29FBB23EDDF19000AF82B /* Products */;
 			projectDirPath = "";
@@ -166,12 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6F29FC223EDDF19000AF82B /* ViewController.swift in Sources */,
-				F6B15A5223F4CD3D001DB252 /* FontViewController.swift in Sources */,
-				F6F29FBE23EDDF19000AF82B /* AppDelegate.swift in Sources */,
-				F6B15A4D23F478AC001DB252 /* UIViewController.swift in Sources */,
-				F6F29FC023EDDF19000AF82B /* SceneDelegate.swift in Sources */,
-				F6F29FD823EDF77A000AF82B /* SettingsViewController.swift in Sources */,
+				F6F29FBE23EDDF19000AF82B /* FlipflapApp.swift in Sources */,
+				F6F29FC023EDDF19000AF82B /* ContentView.swift in Sources */,
+				F6F29FC223EDDF19000AF82B /* SplitFlapView.swift in Sources */,
+				F6F29FD823EDF77A000AF82B /* SettingsView.swift in Sources */,
+				F6B15A5223F4CD3D001DB252 /* FontPickerView.swift in Sources */,
+				F6B15A4D23F478AC001DB252 /* Preferences.swift in Sources */,
+				F6A1B2C3D4E5F67890123457 /* TimeFormat.swift in Sources */,
 				F6F29FC823EDDF19000AF82B /* flipflap.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +237,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -296,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -314,7 +310,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = C6L3992RFB;
 				INFOPLIST_FILE = flipflap/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = C6L3992RFB;
 				INFOPLIST_FILE = flipflap/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,37 +367,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		F6B15A4E23F48797001DB252 /* XCRemoteSwiftPackageReference "EFColorPicker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/EFPrefix/EFColorPicker";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.2;
-			};
-		};
-		F6DAA11A2944F13F001F4C56 /* XCRemoteSwiftPackageReference "Splitflap" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twodayslate/Splitflap";
-			requirement = {
-				branch = mainline;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F6B15A4F23F48797001DB252 /* EFColorPicker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6B15A4E23F48797001DB252 /* XCRemoteSwiftPackageReference "EFColorPicker" */;
-			productName = EFColorPicker;
-		};
-		F6DAA11B2944F13F001F4C56 /* Splitflap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6DAA11A2944F13F001F4C56 /* XCRemoteSwiftPackageReference "Splitflap" */;
-			productName = Splitflap;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F6F29FC623EDDF19000AF82B /* flipflap.xcdatamodeld */ = {
