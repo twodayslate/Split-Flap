@@ -8,6 +8,9 @@ struct SettingsView: View {
     @AppStorage(SettingsKeys.flapColor) private var flapColorData = Preferences.defaultFlapData
     @AppStorage(SettingsKeys.textColor) private var textColorData = Preferences.defaultTextData
     @AppStorage(SettingsKeys.font) private var fontData = Preferences.defaultFontData
+    @AppStorage(SettingsKeys.fontScale) private var fontScale = Preferences.defaultFontScale
+    @AppStorage(SettingsKeys.flapScale) private var flapScale = Preferences.defaultFlapScale
+    @AppStorage(SettingsKeys.flapCornerScale) private var flapCornerScale = Preferences.defaultFlapCornerScale
 
     private var theme: Theme {
         Theme(rawValue: themeRaw) ?? .system
@@ -46,6 +49,36 @@ struct SettingsView: View {
                         }
                     }
 
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("Font Size")
+                            Spacer()
+                            Text("\(Int(fontScale * 100))%")
+                                .foregroundStyle(.secondary)
+                        }
+                        Slider(value: $fontScale, in: 0.5...4.0, step: 0.05)
+                    }
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("Flap Size")
+                            Spacer()
+                            Text("\(Int(flapScale * 100))%")
+                                .foregroundStyle(.secondary)
+                        }
+                        Slider(value: $flapScale, in: 0.5...4.0, step: 0.05)
+                    }
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        HStack {
+                            Text("Corner Radius")
+                            Spacer()
+                            Text("\(Int(flapCornerScale * 100))%")
+                                .foregroundStyle(.secondary)
+                        }
+                        Slider(value: $flapCornerScale, in: 0.5...4.0, step: 0.05)
+                    }
+
                     Button("Reset to Default", role: .destructive) {
                         resetDefaults()
                     }
@@ -63,6 +96,9 @@ struct SettingsView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            clampScales()
         }
     }
 
@@ -103,11 +139,20 @@ struct SettingsView: View {
         themeRaw = Theme.system.rawValue
         resetCustomColors()
         fontData = Preferences.defaultFontData
+        fontScale = Preferences.defaultFontScale
+        flapScale = Preferences.defaultFlapScale
+        flapCornerScale = Preferences.defaultFlapCornerScale
     }
 
     private func resetCustomColors() {
         backgroundColorData = Preferences.defaultBackgroundData
         flapColorData = Preferences.defaultFlapData
         textColorData = Preferences.defaultTextData
+    }
+
+    private func clampScales() {
+        fontScale = max(fontScale, 0.5)
+        flapScale = max(flapScale, 0.5)
+        flapCornerScale = max(flapCornerScale, 0.5)
     }
 }

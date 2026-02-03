@@ -5,6 +5,9 @@ struct SplitFlapView: View {
     let flapColor: Color
     let textColor: Color
     let fontData: Data
+    let fontScale: CGFloat
+    let flapScale: CGFloat
+    let flapCornerScale: CGFloat
 
     var body: some View {
         GeometryReader { proxy in
@@ -13,7 +16,9 @@ struct SplitFlapView: View {
             let spacing = max(2, proxy.size.width * 0.01)
             let totalSpacing = spacing * CGFloat(max(count - 1, 0))
             let flapWidth = (proxy.size.width - totalSpacing) / CGFloat(count)
-            let flapHeight = min(flapWidth * 0.7, proxy.size.height)
+            let baseHeight = flapWidth * 0.7 * flapScale
+            let minHeight = min(proxy.size.height, max(32, flapWidth * 0.6))
+            let flapHeight = min(max(baseHeight, minHeight), proxy.size.height)
 
             HStack(spacing: spacing) {
                 ForEach(characters.indices, id: \.self) { index in
@@ -21,7 +26,9 @@ struct SplitFlapView: View {
                         character: characters[index],
                         background: flapColor,
                         textColor: textColor,
-                        fontData: fontData
+                        fontData: fontData,
+                        fontScale: fontScale,
+                        flapCornerScale: flapCornerScale
                     )
                     .frame(width: flapWidth, height: flapHeight)
                 }
@@ -37,6 +44,8 @@ private struct FlapCell: View {
     let background: Color
     let textColor: Color
     let fontData: Data
+    let fontScale: CGFloat
+    let flapCornerScale: CGFloat
 
     @State private var current: Character
     @State private var previous: Character
@@ -44,11 +53,13 @@ private struct FlapCell: View {
     @State private var bottomAngle: Double = 90
     @State private var isFlipping = false
 
-    init(character: Character, background: Color, textColor: Color, fontData: Data) {
+    init(character: Character, background: Color, textColor: Color, fontData: Data, fontScale: CGFloat, flapCornerScale: CGFloat) {
         self.character = character
         self.background = background
         self.textColor = textColor
         self.fontData = fontData
+        self.fontScale = fontScale
+        self.flapCornerScale = flapCornerScale
         _current = State(initialValue: character)
         _previous = State(initialValue: character)
     }
@@ -58,8 +69,8 @@ private struct FlapCell: View {
             let width = proxy.size.width
             let height = proxy.size.height
             let halfHeight = height / 2
-            let cornerRadius = max(2, height * 0.18)
-            let fontSize = min(width * 0.85, height * 1.1)
+            let cornerRadius = max(2, height * 0.18 * flapCornerScale)
+            let fontSize = min(width * 0.85, height * 1.1) * fontScale
 
             ZStack {
                 FlapHalf(
@@ -113,6 +124,8 @@ private struct FlapCell: View {
                 .opacity(isFlipping ? 1.0 : 0.0)
                 .frame(width: width, height: halfHeight, alignment: .top)
                 .position(x: width / 2, y: halfHeight / 2)
+                .compositingGroup()
+                .clipShape(RoundedCorner(radius: cornerRadius, corners: [.topLeft, .topRight]))
                 .zIndex(2)
 
                 FlapHalf(
@@ -135,6 +148,8 @@ private struct FlapCell: View {
                 .opacity(isFlipping ? 1.0 : 0.0)
                 .frame(width: width, height: halfHeight, alignment: .bottom)
                 .position(x: width / 2, y: height - halfHeight / 2)
+                .compositingGroup()
+                .clipShape(RoundedCorner(radius: cornerRadius, corners: [.bottomLeft, .bottomRight]))
                 .zIndex(1)
             }
             .overlay(
@@ -186,7 +201,7 @@ private struct FlapHalf: View {
                 .font(font)
                 .foregroundColor(textColor)
                 .lineLimit(1)
-                .minimumScaleFactor(0.5)
+                .minimumScaleFactor(0.1)
                 .frame(width: width, height: halfHeight * 2)
                 .frame(width: width, height: halfHeight, alignment: isTop ? .top : .bottom)
                 .clipped()

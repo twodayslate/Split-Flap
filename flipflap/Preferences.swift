@@ -8,6 +8,9 @@ enum SettingsKeys {
     static let flapColor = "flap_color"
     static let textColor = "text_color"
     static let font = "font"
+    static let fontScale = "font_scale"
+    static let flapScale = "flap_scale"
+    static let flapCornerScale = "flap_corner_scale"
 }
 
 enum Theme: Int, CaseIterable, Identifiable {
@@ -49,6 +52,9 @@ enum Preferences {
     static let defaultText = UIColor.label
     static let defaultFontFamily = "Courier"
     static let defaultFontSize: CGFloat = 45.0
+    static let defaultFontScale = 1.0
+    static let defaultFlapScale = 1.0
+    static let defaultFlapCornerScale = 1.0
     static let defaultBackgroundData = ColorArchive.encode(defaultBackground)
     static let defaultFlapData = ColorArchive.encode(defaultFlap)
     static let defaultTextData = ColorArchive.encode(defaultText)

@@ -8,6 +8,9 @@ struct ContentView: View {
     @AppStorage(SettingsKeys.flapColor) private var flapColorData = Preferences.defaultFlapData
     @AppStorage(SettingsKeys.textColor) private var textColorData = Preferences.defaultTextData
     @AppStorage(SettingsKeys.font) private var fontData = Preferences.defaultFontData
+    @AppStorage(SettingsKeys.fontScale) private var fontScale = Preferences.defaultFontScale
+    @AppStorage(SettingsKeys.flapScale) private var flapScale = Preferences.defaultFlapScale
+    @AppStorage(SettingsKeys.flapCornerScale) private var flapCornerScale = Preferences.defaultFlapCornerScale
 
     @State private var showSettings = false
     @State private var settingsOpacity = 0.0
@@ -43,12 +46,19 @@ struct ContentView: View {
             backgroundColor
                 .ignoresSafeArea()
 
+            let resolvedFontScale = max(0.5, CGFloat(fontScale))
+            let resolvedFlapScale = max(0.5, CGFloat(flapScale))
+            let resolvedCornerScale = max(0.5, CGFloat(flapCornerScale))
+
             TimelineView(.periodic(from: .now, by: 1.0)) { context in
                 SplitFlapView(
                     text: TimeFormatter.string(for: context.date, showSeconds: showSeconds),
                     flapColor: flapColor,
                     textColor: textColor,
-                    fontData: fontData
+                    fontData: fontData,
+                    fontScale: resolvedFontScale,
+                    flapScale: resolvedFlapScale,
+                    flapCornerScale: resolvedCornerScale
                 )
                 .padding(.horizontal, 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
