@@ -46,15 +46,19 @@ struct ContentView: View {
             backgroundColor
                 .ignoresSafeArea()
 
+            let resolvedFontScale = max(0.5, CGFloat(fontScale))
+            let resolvedFlapScale = max(0.5, CGFloat(flapScale))
+            let resolvedCornerScale = max(0.5, CGFloat(flapCornerScale))
+
             TimelineView(.periodic(from: .now, by: 1.0)) { context in
                 SplitFlapView(
                     text: TimeFormatter.string(for: context.date, showSeconds: showSeconds),
                     flapColor: flapColor,
                     textColor: textColor,
                     fontData: fontData,
-                    fontScale: CGFloat(fontScale),
-                    flapScale: CGFloat(flapScale),
-                    flapCornerScale: CGFloat(flapCornerScale)
+                    fontScale: resolvedFontScale,
+                    flapScale: resolvedFlapScale,
+                    flapCornerScale: resolvedCornerScale
                 )
                 .padding(.horizontal, 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

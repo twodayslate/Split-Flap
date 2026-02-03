@@ -56,7 +56,7 @@ struct SettingsView: View {
                             Text("\(Int(fontScale * 100))%")
                                 .foregroundStyle(.secondary)
                         }
-                        Slider(value: $fontScale, in: 0.1...4.0, step: 0.05)
+                        Slider(value: $fontScale, in: 0.5...4.0, step: 0.05)
                     }
 
                     VStack(alignment: .leading, spacing: 8) {
@@ -66,7 +66,7 @@ struct SettingsView: View {
                             Text("\(Int(flapScale * 100))%")
                                 .foregroundStyle(.secondary)
                         }
-                        Slider(value: $flapScale, in: 0.1...4.0, step: 0.05)
+                        Slider(value: $flapScale, in: 0.5...4.0, step: 0.05)
                     }
 
                     VStack(alignment: .leading, spacing: 8) {
@@ -76,7 +76,7 @@ struct SettingsView: View {
                             Text("\(Int(flapCornerScale * 100))%")
                                 .foregroundStyle(.secondary)
                         }
-                        Slider(value: $flapCornerScale, in: 0.1...4.0, step: 0.05)
+                        Slider(value: $flapCornerScale, in: 0.5...4.0, step: 0.05)
                     }
 
                     Button("Reset to Default", role: .destructive) {
@@ -96,6 +96,9 @@ struct SettingsView: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            clampScales()
         }
     }
 
@@ -145,5 +148,11 @@ struct SettingsView: View {
         backgroundColorData = Preferences.defaultBackgroundData
         flapColorData = Preferences.defaultFlapData
         textColorData = Preferences.defaultTextData
+    }
+
+    private func clampScales() {
+        fontScale = max(fontScale, 0.5)
+        flapScale = max(flapScale, 0.5)
+        flapCornerScale = max(flapCornerScale, 0.5)
     }
 }

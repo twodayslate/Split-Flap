@@ -16,7 +16,9 @@ struct SplitFlapView: View {
             let spacing = max(2, proxy.size.width * 0.01)
             let totalSpacing = spacing * CGFloat(max(count - 1, 0))
             let flapWidth = (proxy.size.width - totalSpacing) / CGFloat(count)
-            let flapHeight = min(flapWidth * 0.7 * flapScale, proxy.size.height)
+            let baseHeight = flapWidth * 0.7 * flapScale
+            let minHeight = min(proxy.size.height, max(32, flapWidth * 0.6))
+            let flapHeight = min(max(baseHeight, minHeight), proxy.size.height)
 
             HStack(spacing: spacing) {
                 ForEach(characters.indices, id: \.self) { index in
