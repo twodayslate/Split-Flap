@@ -11,6 +11,10 @@ enum SettingsKeys {
     static let fontScale = "font_scale"
     static let flapScale = "flap_scale"
     static let flapCornerScale = "flap_corner_scale"
+    static let flapSoundMode = "flap_sound_mode"
+    static let flapSoundSystemID = "flap_sound_system_id"
+    static let flapSoundCustomName = "flap_sound_custom_name"
+    static let flapSoundBundledName = "flap_sound_bundled_name"
 }
 
 enum Theme: Int, CaseIterable, Identifiable {

@@ -11,6 +11,10 @@ struct ContentView: View {
     @AppStorage(SettingsKeys.fontScale) private var fontScale = Preferences.defaultFontScale
     @AppStorage(SettingsKeys.flapScale) private var flapScale = Preferences.defaultFlapScale
     @AppStorage(SettingsKeys.flapCornerScale) private var flapCornerScale = Preferences.defaultFlapCornerScale
+    @AppStorage(SettingsKeys.flapSoundMode) private var flapSoundModeRaw = FlapSoundMode.none.rawValue
+    @AppStorage(SettingsKeys.flapSoundSystemID) private var flapSoundSystemID = FlapSoundDefaults.defaultSystemSoundID
+    @AppStorage(SettingsKeys.flapSoundCustomName) private var flapSoundCustomName = ""
+    @AppStorage(SettingsKeys.flapSoundBundledName) private var flapSoundBundledName = FlapSoundDefaults.defaultBundledSoundName
 
     @State private var showSettings = false
     @State private var settingsOpacity = 0.0
@@ -41,6 +45,15 @@ struct ContentView: View {
         return Color(Preferences.defaultText)
     }
 
+    private var flapSoundSelection: FlapSoundSelection {
+        FlapSoundSelection(
+            mode: FlapSoundMode(rawValue: flapSoundModeRaw) ?? .none,
+            systemSoundID: flapSoundSystemID,
+            customSoundName: flapSoundCustomName,
+            bundledSoundName: flapSoundBundledName
+        )
+    }
+
     var body: some View {
         ZStack {
             backgroundColor
@@ -58,7 +71,8 @@ struct ContentView: View {
                     fontData: fontData,
                     fontScale: resolvedFontScale,
                     flapScale: resolvedFlapScale,
-                    flapCornerScale: resolvedCornerScale
+                    flapCornerScale: resolvedCornerScale,
+                    soundSelection: flapSoundSelection
                 )
                 .padding(.horizontal, 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

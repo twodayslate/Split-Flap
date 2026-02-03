@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F6B15A4D23F478AC001DB252 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A4C23F478AC001DB252 /* Preferences.swift */; };
 		F6B15A5223F4CD3D001DB252 /* FontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B15A5123F4CD3D001DB252 /* FontPickerView.swift */; };
+		F6C0A1B223F4E00100000002 /* FlapSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0A1B223F4E00100000001 /* FlapSound.swift */; };
+		F6C0A1B223F4E00100000004 /* flap.wav in Resources */ = {isa = PBXBuildFile; fileRef = F6C0A1B223F4E00100000003 /* flap.wav */; };
+		F6C0A1B223F4E00100000006 /* flap_long.wav in Resources */ = {isa = PBXBuildFile; fileRef = F6C0A1B223F4E00100000005 /* flap_long.wav */; };
 		F6F29FBE23EDDF19000AF82B /* FlipflapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBD23EDDF19000AF82B /* FlipflapApp.swift */; };
 		F6F29FC023EDDF19000AF82B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FBF23EDDF19000AF82B /* ContentView.swift */; };
 		F6F29FC223EDDF19000AF82B /* SplitFlapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F29FC123EDDF19000AF82B /* SplitFlapView.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		F6B15A4C23F478AC001DB252 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		F6B15A5123F4CD3D001DB252 /* FontPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerView.swift; sourceTree = "<group>"; };
+		F6C0A1B223F4E00100000001 /* FlapSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlapSound.swift; sourceTree = "<group>"; };
+		F6C0A1B223F4E00100000003 /* flap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flap.wav; sourceTree = "<group>"; };
+		F6C0A1B223F4E00100000005 /* flap_long.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flap_long.wav; sourceTree = "<group>"; };
 		F6F29FBA23EDDF19000AF82B /* flipflap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flipflap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F29FBD23EDDF19000AF82B /* FlipflapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipflapApp.swift; sourceTree = "<group>"; };
 		F6F29FBF23EDDF19000AF82B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				F6F29FBD23EDDF19000AF82B /* FlipflapApp.swift */,
 				F6F29FBF23EDDF19000AF82B /* ContentView.swift */,
 				F6F29FC123EDDF19000AF82B /* SplitFlapView.swift */,
+				F6C0A1B223F4E00100000001 /* FlapSound.swift */,
+				F6C0A1B223F4E00100000003 /* flap.wav */,
+				F6C0A1B223F4E00100000005 /* flap_long.wav */,
 				F6F29FD723EDF77A000AF82B /* SettingsView.swift */,
 				F6B15A5123F4CD3D001DB252 /* FontPickerView.swift */,
 				F6B15A4C23F478AC001DB252 /* Preferences.swift */,
@@ -149,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C0A1B223F4E00100000004 /* flap.wav in Resources */,
+				F6C0A1B223F4E00100000006 /* flap_long.wav in Resources */,
 				F6F29FCD23EDDF1C000AF82B /* LaunchScreen.storyboard in Resources */,
 				F6F29FCA23EDDF1C000AF82B /* Assets.xcassets in Resources */,
 			);
@@ -164,6 +175,7 @@
 				F6F29FBE23EDDF19000AF82B /* FlipflapApp.swift in Sources */,
 				F6F29FC023EDDF19000AF82B /* ContentView.swift in Sources */,
 				F6F29FC223EDDF19000AF82B /* SplitFlapView.swift in Sources */,
+				F6C0A1B223F4E00100000002 /* FlapSound.swift in Sources */,
 				F6F29FD823EDF77A000AF82B /* SettingsView.swift in Sources */,
 				F6B15A5223F4CD3D001DB252 /* FontPickerView.swift in Sources */,
 				F6B15A4D23F478AC001DB252 /* Preferences.swift in Sources */,
