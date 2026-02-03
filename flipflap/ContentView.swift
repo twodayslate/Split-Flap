@@ -8,6 +8,9 @@ struct ContentView: View {
     @AppStorage(SettingsKeys.flapColor) private var flapColorData = Preferences.defaultFlapData
     @AppStorage(SettingsKeys.textColor) private var textColorData = Preferences.defaultTextData
     @AppStorage(SettingsKeys.font) private var fontData = Preferences.defaultFontData
+    @AppStorage(SettingsKeys.fontScale) private var fontScale = Preferences.defaultFontScale
+    @AppStorage(SettingsKeys.flapScale) private var flapScale = Preferences.defaultFlapScale
+    @AppStorage(SettingsKeys.flapCornerScale) private var flapCornerScale = Preferences.defaultFlapCornerScale
 
     @State private var showSettings = false
     @State private var settingsOpacity = 0.0
@@ -48,7 +51,10 @@ struct ContentView: View {
                     text: TimeFormatter.string(for: context.date, showSeconds: showSeconds),
                     flapColor: flapColor,
                     textColor: textColor,
-                    fontData: fontData
+                    fontData: fontData,
+                    fontScale: CGFloat(fontScale),
+                    flapScale: CGFloat(flapScale),
+                    flapCornerScale: CGFloat(flapCornerScale)
                 )
                 .padding(.horizontal, 12)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
